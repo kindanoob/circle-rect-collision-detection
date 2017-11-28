@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.0)
 
-project(foompello)
+project(circle_rect_collision)
 
 file(GLOB_RECURSE SOURCES src/*.cpp include/*.h)
 file(GLOB_RECURSE RESOURCES resources/fonts/*)
