@@ -7,17 +7,17 @@
 constexpr int kWindowWidth = 800;
 constexpr int kWindowHeight = 600;
 const std::string kWindowTitle = "Collision detection";
-const sf::Color kBackgroundColor = sf::Color::White;
+const sf::Color kBackgroundColor = sf::Color(255, 255, 255);
 
-constexpr double kCircleRadius = 40; //in pixels
-const sf::Color kCircleDefaultColor = sf::Color::Magenta;
-const sf::Color kCircleCollisionColor = sf::Color::Red;
+constexpr double kCircleRadiusInPixels = 40;
+const sf::Color kCircleDefaultColor = sf::Color(255, 0, 255); // Magenta
+const sf::Color kCircleCollisionColor = sf::Color(255, 0, 0); // Red
 constexpr double kCircleInitialPositionX = 100.0;
 constexpr double kCircleInitialPositionY = 100.0;
 
 constexpr int kRectangleWidth = 200;
 constexpr int kRectangleHeight = 100;
-const sf::Color kRectangleDefaultColor = sf::Color::Blue;
+const sf::Color kRectangleDefaultColor = sf::Color(0, 0, 255); // Blue
 constexpr double kRectangleInitialPositionX = 400.0;
 constexpr double kRectangleInitialPositionY = 300.0;
 
@@ -171,8 +171,8 @@ int main() {
     rect.setPosition(sf::Vector2f(kRectangleInitialPositionX, kRectangleInitialPositionY));
 
     sf::CircleShape circle;
-    circle.setRadius(kCircleRadius);
-    circle.setOrigin(sf::Vector2f(kCircleRadius, kCircleRadius));
+    circle.setRadius(kCircleRadiusInPixels);
+    circle.setOrigin(sf::Vector2f(kCircleRadiusInPixels, kCircleRadiusInPixels));
     circle.setPosition(sf::Vector2f(kCircleInitialPositionX, kCircleInitialPositionY));
     circle.setFillColor(kCircleDefaultColor);
 
